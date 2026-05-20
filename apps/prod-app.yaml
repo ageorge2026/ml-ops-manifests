@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: rag-app-prod
-  namespace: automation
+  namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
