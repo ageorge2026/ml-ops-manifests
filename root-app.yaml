@@ -1,0 +1,20 @@
+aapiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: master-root-bootstrap
+  namespace: automation        # 👈 Points to your custom ArgoCD namespace
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/YOUR_GITHUB_USERNAME/YOUR_MANIFEST_REPO.git'
+    targetRevision: HEAD
+    path: apps/                 # 👈 Points to the Switchboard management directory
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: automation      # 👈 Deploys the child applications into your management space
+  syncPolicy:
+    automated:
+      prune: true              # Automatically deletes resources when removed from Git
+      selfHeal: true           # Automatically fixes manual cluster overrides to match Git
+    syncOptions:
+      - CreateNamespace=true    # 👈 REQUIRED: Allows ArgoCD to auto-provision namespaces like 'production'
