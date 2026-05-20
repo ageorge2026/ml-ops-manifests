@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/YOUR_GITHUB_USERNAME/YOUR_MANIFEST_REPO.git'
+    repoURL: 'https://github.com/ageorge2026/ml-ops-manifests.git'
     targetRevision: HEAD
     path: apps/                 # 👈 Points to the Switchboard management directory
   destination:
