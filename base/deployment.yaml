@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rag-app-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rag-app
+  template:
+    metadata:
+      labels:
+        app: rag-app
+    spec:
+      containers:
+      - name: rag-app-container
+        image: ghcr.io/YOUR_GITHUB_USERNAME/YOUR_RAG_APP_REPO:latest
+        ports:
+        - containerPort: 8080
+        imagePullPolicy: IfNotPresent
+      imagePullSecrets:
+      - name: ghcr-pull-secret
