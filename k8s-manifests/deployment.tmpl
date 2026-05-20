@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rag-app-deployment
+  namespace: automation
+spec:
+  # Dynamically scale instances based on target environment. TOKEN_REPLICAS is a number to be replaced by sed script from GitHub Actions
+  replicas: TOKEN_REPLICAS
+  selector:
+    matchLabels:
+      # TOKEN_APPNAME is the App name to be replaced by sed script from GitHub Actions
+      app: TOKEN_APPNAME
+  template:
+    metadata:
+      labels:
+        app: rag-app
+    spec:
+      containers:
+      - name: rag-app-container
+        # Parameterized registry path and image tag. TOKEN_GITHUB_USERNAME/TOKEN_RAG_APP_REPO:PLACEHOLDER_TAG to be replaced from GitHub Actions thru sed
+        image: ghcr.io/TOKEN_GITHUB_USERNAME/TOKEN_RAG_APP_REPO:PLACEHOLDER_TAG
+        ports:
+        - containerPort: 8080
+        imagePullPolicy: IfNotPresent
+      imagePullSecrets:
+      - name: ghcr-pull-secret
