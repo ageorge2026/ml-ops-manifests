@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: rag-app-container
-        image: ghcr.io/YOUR_GITHUB_USERNAME/YOUR_RAG_APP_REPO:latest
+        image: ghcr.io/ageorge2026/ml-ops-manifests.git:latest
         ports:
         - containerPort: 8080
         imagePullPolicy: IfNotPresent
