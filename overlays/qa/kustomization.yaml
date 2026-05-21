@@ -10,5 +10,5 @@ patches:
   - path: patches.yaml
 
 images:
-  - name: ghcr.io/YOUR_GITHUB_USERNAME/YOUR_RAG_APP_REPO
+  - name: ghcr.io/ageorge2026/ml-rag-apps-one
     newTag: qa-latest
