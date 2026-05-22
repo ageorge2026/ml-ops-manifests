@@ -10,8 +10,5 @@ patches:
 - path: patches.yaml
 
 images:
-- name: ghcr.io/ageorge2026/ml-rag-apps-one
-  newTag: prod-PLACEHOLDER_SHA
 - name: ghcr.io/ageorge2026/standalone-calculator
-  newName: ghcr.io/ageorge2026/standalone-calculator
   newTag: 33e06aa
