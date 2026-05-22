@@ -4,3 +4,9 @@ metadata:
   name: rag-app-deployment
 spec:
   replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - name: ghcr-pull-secret  # ◄── Updated to match your exact secret name
+      containers:
+        - name: rag-app-container
