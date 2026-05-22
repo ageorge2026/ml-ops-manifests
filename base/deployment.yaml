@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: rag-app-container
-        image: ghcr.io/ageorge2026/ml-rag-apps-one:latest
+        image: ghcr.io/ageorge2026/standalone-calculator:latest
         ports:
         - containerPort: 8080
         imagePullPolicy: IfNotPresent
