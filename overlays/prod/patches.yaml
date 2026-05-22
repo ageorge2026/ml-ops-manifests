@@ -5,8 +5,8 @@ metadata:
 spec:
   replicas: 3  
   template:
-    spec:
+    spec: # ◄── Ensure this spec block exists
       imagePullSecrets:
-        - name: ghcr-pull-secret  # ◄── Updated to match your exact secret name
+        - name: ghcr-pull-secret  
       containers:
         - name: rag-app-container
