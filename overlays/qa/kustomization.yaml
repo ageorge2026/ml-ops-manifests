@@ -10,5 +10,5 @@ patches:
   - path: patches.yaml
 
 images:
-  - name: ghcr.io/ageorge2026/ml-rag-apps-one
+  - name: ghcr.io/ageorge2026/standalone-calculator
     newTag: qa-latest
