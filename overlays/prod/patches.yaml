@@ -13,5 +13,5 @@ spec:
         command: ["/bin/sh", "-c"]
           args:
             - |
-              python3 -c "print('--- Simulating MLOps Application Runtime ---\nExecuting core system smoke checks...\nAll internal software verifications: PASSED.')"
-              while true; do sleep 30; done  # ◄── Keeps the container alive indefinitely
+                python3 -c "print('--- Simulating MLOps Application Runtime ---\nExecuting core system smoke checks...\nAll internal software verifications: PASSED.')"
+                while true; do sleep 30; done  # ◄── Keeps the container alive indefinitely
